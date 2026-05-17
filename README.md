@@ -26,3 +26,116 @@ A robust RESTful API built with Node.js, Express, and Mongoose for managing a di
 * `GET /api/recipes/:id` - Retrieve a specific recipe
 * `PATCH /api/recipes/:id` - Update a recipe
 * `DELETE /api/recipes/:id` - Delete a recipe
+
+API Collection Documentation 
+{
+  "info": {
+    "_postman_id": "37d7694a-69f2-4bbc-b067-16a4684e30c6",
+    "name": "Recipes-app API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54466106",
+    "_collection_link": "https://go.postman.co/collection/54466106-37d7694a-69f2-4bbc-b067-16a4684e30c6?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "GET",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/recipes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "recipes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\": \"Homestyle Chicken Curry\",\r\n    \"ingredients\": [\r\n        \"Chicken\", \r\n        \"Onions\", \r\n        \"Tomatoes\", \r\n        \"Ginger Garlic Paste\", \r\n        \"Curry Powder\"\r\n    ],\r\n    \"instructions\": \"Sauté onions and paste. Add tomatoes and spices. Cook chicken until tender.\",\r\n    \"prepTimeMinutes\": 45,\r\n    \"servings\": 4\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/recipes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "recipes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PATCH",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"servings\": 8,\r\n    \"prepTimeMinutes\": 60\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/recipes/6a07669c58c34c086ec831b9",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "recipes",
+            "6a07669c58c34c086ec831b9"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/recipes/6a07669c58c34c086ec831b9",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "recipes",
+            "6a07669c58c34c086ec831b9"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
