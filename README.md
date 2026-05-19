@@ -139,3 +139,5 @@ API Collection Documentation
     }
   ]
 }
+
+LIVE URL : https://recipe-app-api-lbl7.onrender.com/
