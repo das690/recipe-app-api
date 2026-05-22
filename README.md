@@ -29,7 +29,6 @@ A secure, cloud-connected RESTful API built using Node.js, Express, and MongoDB 
       "prepTimeMinutes": 45,
       "servings": 4
     }
-<<<<<<< HEAD
     ```
 * **Response:** `201 Created`
 
@@ -50,9 +49,3 @@ A secure, cloud-connected RESTful API built using Node.js, Express, and MongoDB 
 * **Database:** MongoDB Atlas (Cloud) connected via Mongoose ODM.
 * **Security:** Handled environment variables using `dotenv` and kept credentials hidden using `.gitignore`.
 * **Deployment:** Automated builds hosted on Render.
-=======
-  ]
-}
-
-LIVE URL : https://recipe-app-api-lbl7.onrender.com/
->>>>>>> c801396f028eb5c14252507bf0b48866cea38502
