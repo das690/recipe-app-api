@@ -1,141 +1,51 @@
 # Recipe Management API
 
-A robust RESTful API built with Node.js, Express, and Mongoose for managing a digital recipe catalog. This project strictly follows the MVC (Model-View-Controller) design pattern.
+A secure, cloud-connected RESTful API built using Node.js, Express, and MongoDB Atlas, deployed live on Render.
 
-## Features
-* Complete CRUD functionality (Create, Read, Update, Delete).
-* Clean MVC architecture.
-* MongoDB integration using Mongoose.
-* Built-in data validation and error handling (e.g., catching missing fields, invalid IDs).
+## 🔗 Live Project Links
 
-## Tech Stack
-* **Runtime:** Node.js
-* **Framework:** Express.js
-* **Database:** MongoDB
-* **ODM:** Mongoose
+* **Live API URL:** `https://recipe-app-api-lbl7.onrender.com/api/recipes`
+* **API Documentation:** `https://documenter.getpostman.com/view/54466106/2sBXwjwZZf`
+* **GitHub Repository:** `https://github.com/das690/recipe-app-api`
 
-## Installation and Setup
-1. Clone the repository.
-2. Run `npm install` to install dependencies.
-3. Create a `.env` file in the root directory and add your variables:
-4. Start the server using `node server.js` (or `nodemon server.js` for development).
+---
 
-## API Endpoints
-* `POST /api/recipes` - Create a new recipe
-* `GET /api/recipes` - Retrieve all recipes
-* `GET /api/recipes/:id` - Retrieve a specific recipe
-* `PATCH /api/recipes/:id` - Update a recipe
-* `DELETE /api/recipes/:id` - Delete a recipe
+## 🚀 Endpoints Available
 
-API Collection Documentation 
-{
-  "info": {
-    "_postman_id": "37d7694a-69f2-4bbc-b067-16a4684e30c6",
-    "name": "Recipes-app API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "54466106",
-    "_collection_link": "https://go.postman.co/collection/54466106-37d7694a-69f2-4bbc-b067-16a4684e30c6?source=collection_link"
-  },
-  "item": [
+### 1. Get All Recipes
+* **Method:** `GET`
+* **URL:** `/api/recipes`
+* **Response:** `200 OK` (Returns an array of all recipes)
+
+### 2. Create a Recipe
+* **Method:** `POST`
+* **URL:** `/api/recipes`
+* **Body (JSON):**
+    ```json
     {
-      "name": "GET",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:3000/api/recipes",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "3000",
-          "path": [
-            "api",
-            "recipes"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "POST",
-      "request": {
-        "method": "POST",
-        "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "{\r\n    \"title\": \"Homestyle Chicken Curry\",\r\n    \"ingredients\": [\r\n        \"Chicken\", \r\n        \"Onions\", \r\n        \"Tomatoes\", \r\n        \"Ginger Garlic Paste\", \r\n        \"Curry Powder\"\r\n    ],\r\n    \"instructions\": \"Sauté onions and paste. Add tomatoes and spices. Cook chicken until tender.\",\r\n    \"prepTimeMinutes\": 45,\r\n    \"servings\": 4\r\n}",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        },
-        "url": {
-          "raw": "http://localhost:3000/api/recipes",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "3000",
-          "path": [
-            "api",
-            "recipes"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "PATCH",
-      "request": {
-        "method": "PATCH",
-        "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "{\r\n    \"servings\": 8,\r\n    \"prepTimeMinutes\": 60\r\n}",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        },
-        "url": {
-          "raw": "http://localhost:3000/api/recipes/6a07669c58c34c086ec831b9",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "3000",
-          "path": [
-            "api",
-            "recipes",
-            "6a07669c58c34c086ec831b9"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "DELETE",
-      "request": {
-        "method": "DELETE",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:3000/api/recipes/6a07669c58c34c086ec831b9",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "3000",
-          "path": [
-            "api",
-            "recipes",
-            "6a07669c58c34c086ec831b9"
-          ]
-        }
-      },
-      "response": []
+      "title": "Homestyle Chicken Curry",
+      "ingredients": ["Chicken", "Onions", "Tomatoes", "Spices"],
+      "instructions": "Sauté ingredients and cook chicken until tender.",
+      "prepTimeMinutes": 45,
+      "servings": 4
     }
-  ]
-}
+    ```
+* **Response:** `201 Created`
+
+### 3. Update a Recipe
+* **Method:** `PATCH`
+* **URL:** `/api/recipes/:id`
+* **Response:** `200 OK`
+
+### 4. Delete a Recipe
+* **Method:** `DELETE`
+* **URL:** `/api/recipes/:id`
+* **Response:** `204 No Content`
+
+---
+
+## 🛠️ Tech Stack & Features
+* **Backend:** Node.js with Express.js framework.
+* **Database:** MongoDB Atlas (Cloud) connected via Mongoose ODM.
+* **Security:** Handled environment variables using `dotenv` and kept credentials hidden using `.gitignore`.
+* **Deployment:** Automated builds hosted on Render.
